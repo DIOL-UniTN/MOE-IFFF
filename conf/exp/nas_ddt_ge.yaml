@@ -1,0 +1,29 @@
+_target_: experiments.NASDDTGE
+n_gens: 10
+pop_size: 10
+max_params: 250000
+min_params: 10000
+fix_leaf: False
+sampling: "imbalanced" # "balanced"
+obj: params # "param", "macs"
+
+mutation: 
+  type: pm
+  p: 1.0
+
+crossover: 
+  type: sbx
+  p: 1.0
+  n_points: 1
+
+grammar: 
+  _target_: utils.DDTGrammar
+  gene_bits: 8
+  # BNF and Production rules
+  start: "router children"
+  children: ["router children,router children", "router children,leaf", "leaf,leaf"] #TODO: Ask guys if reducing this to 3 is ok rather than 4/5
+  max_depth: 7
+  max_leaf_width: 16
+  depthwise: False # Supports balanced initialization
+  #TODO Kill duplicates, prune, idk other thing check proj, etc.
+  # TODO: Try modifying order (idk. first leaves then routers mayeb)

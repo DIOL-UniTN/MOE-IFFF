@@ -1,0 +1,4 @@
+_target_: models.IADDT
+_partial_: True # in_channels, num_classes (out_dim), image_size (in_hxw[0] or in_hxw) / before
+
+leaf_width: 8

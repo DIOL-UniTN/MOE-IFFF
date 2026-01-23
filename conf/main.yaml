@@ -1,0 +1,37 @@
+_target_: main.Main
+
+proj_name: growDDT
+
+defaults:
+  # Main
+  - _self_
+  - exp: nas_ddt_ge
+  - mlflow: my_mlflow
+  - model: any_iaddt
+  - optim: adam
+  - loader: mnist
+  - a_sched: lin_warmup # lin_warmup, step, none
+  # - pbs
+  # - slurm
+
+seed: 47
+debug: false
+epochs: 50
+run_name: null
+
+device: 
+  _target_: torch.device
+  type: cpu
+  index: 0
+
+## Output dir
+hydra:
+  run:
+    dir: data/${proj_name}_outputs/${exp._target_}/${now:%Y-%m-%d}/${now:%H-%M-%S}
+  sweep:
+    dir: data/${proj_name}_multirun/${exp._target_}/${now:%Y-%m-%d}/${now:%H-%M-%S}
+  job: # squeue
+    name: ${proj_name}_${exp._target_}
+  callbacks:
+    metrics_callback:
+      _target_: main.MetricsCallback

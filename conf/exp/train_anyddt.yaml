@@ -1,0 +1,9 @@
+_target_: experiments.TrainAnyDDT
+
+n_runs: 1
+tree: 
+  _target_: utils.Tree
+  arch: [0, 4, 0, -1, -1, 8, 1] # Unbalanced architecture, d=2; leaf if >= 2
+  max_depth: null
+  max_width: null
+

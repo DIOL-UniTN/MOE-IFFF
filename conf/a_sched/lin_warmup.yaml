@@ -1,0 +1,8 @@
+_target_: utils.awareness.LinearWarmupSched
+_partial_: True
+
+epochs: ${epochs}
+warmup: 
+  _target_: utils.awareness.WarmUp
+  epochs: ${epochs}
+warmup_rate: 0.5

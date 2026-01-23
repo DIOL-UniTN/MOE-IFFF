@@ -1,0 +1,7 @@
+_target_: models.MoE
+_partial_: True # in_channels, num_classes (out_dim), image_size (in_hxw[0] or in_hxw) / before
+
+width: 8
+num_experts: 4
+topk: 1
+mode: sparse

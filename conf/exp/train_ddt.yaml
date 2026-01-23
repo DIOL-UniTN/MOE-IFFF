@@ -1,0 +1,4 @@
+_target_: experiments.TrainDDT
+
+arch: 1210022 # Unbalanced architecture, d=2
+# arch: 1112222 # Balanced architecture, d=2

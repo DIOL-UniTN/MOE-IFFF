@@ -1,0 +1,15 @@
+defaults:
+  - override hydra/launcher: submitit_slurm
+
+## Output dir
+hydra:
+  launcher:
+    partition: long-disi
+    timeout_min: 2880
+    nodes: 1
+    tasks_per_node: 1
+    cpus_per_task: 8
+    mem_per_cpu: 2048M
+    gres: gpu:1
+    additional_parameters:
+      mail_type: END,FAIL

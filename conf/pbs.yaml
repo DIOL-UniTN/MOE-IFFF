@@ -1,0 +1,14 @@
+defaults:
+  - override hydra/sweeper: pbs
+
+## PBS
+hydra:
+  sweeper:
+    job_name: ${proj_name}
+    queue_name: common_cpuQ
+    ncpus_per_node: 1
+    ngpus_per_node: 0
+    queue_node_limit: 10
+    time: 48
+    mem: 16
+    profile_file: ~/.bashrc # Sources before starting

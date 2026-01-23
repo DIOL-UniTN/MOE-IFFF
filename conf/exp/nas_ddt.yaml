@@ -1,0 +1,23 @@
+_target_: experiments.NASDDT
+n_gens: 10
+pop_size: 10
+max_params: 250000
+min_params: 10000
+fix_leaf: False
+sampling: "balanced" # "imbalanced"
+obj: params # "param", "macs"
+
+mutation: 
+  type: pm
+  p: 1.0
+
+crossover: 
+  type: sbx
+  p: 1.0
+  n_points: 1
+
+tree: 
+  _target_: utils.Tree
+  _partial_: True
+  max_depth: 7
+  max_width: 16

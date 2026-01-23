@@ -1,0 +1,6 @@
+_target_: utils.awareness.StepSched
+_partial_: True
+
+epochs: ${epochs}
+steps: 3
+warmup_rate: 0.5

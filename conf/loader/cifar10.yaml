@@ -1,0 +1,9 @@
+_target_: loaders.CIFAR10Loader
+
+batch_size: 512
+num_workers: 0
+
+normalize:
+  _target_: torchvision.transforms.Normalize
+  mean: [0.4914, 0.4822, 0.4465]
+  std: [0.2023, 0.1994, 0.2010]

@@ -1,0 +1,5 @@
+_target_: loaders.HARLoader
+
+batch_size: 512
+num_workers: 0
+normalize: null
