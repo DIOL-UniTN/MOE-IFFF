@@ -81,5 +81,3 @@ sit: sitting
 std: standing
 wlk: walking
 jog: jogging
-
-```
