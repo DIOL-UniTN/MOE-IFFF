@@ -54,7 +54,7 @@ python src/main.py --multirun exp=nas_ddt loader=mnist,sc,motionsense
 
 ## Datasets:
 
-In addition to very well known sets as MNIST, GoogleSpeechCommandsv2, we also provide a HAR dataset:
+In addition to very well known sets as MNIST, SpeechCommandsv2, we also provide a HAR dataset:
 
 ### [Motion Sense Dataset](https://github.com/mmalekzadeh/motion-sense)
 
