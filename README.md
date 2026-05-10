@@ -81,3 +81,23 @@ sit: sitting
 std: standing
 wlk: walking
 jog: jogging
+
+## Citation
+If you find this work useful, please consider citing:
+```bibtex
+@InProceedings{10.1007/978-3-032-23604-3_23,
+author="Kilic, Renan Beran
+and Yildirim, Kasim Sinan
+and Iacca, Giovanni",
+editor="Garc{\'i}a-S{\'a}nchez, Pablo
+and D{\'i}az {\'A}lvarez, Josefa
+and Murphy, Aidan",
+title="Multi-objective Evolutionary Optimization of Imbalanced Fast Feedforward Networks",
+booktitle="Applications of Evolutionary Computation",
+year="2026",
+publisher="Springer Nature Switzerland",
+address="Cham",
+pages="367--383",
+isbn="978-3-032-23604-3"
+}
+```
